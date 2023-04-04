@@ -4,7 +4,9 @@ const todoList = () => {
     getMakeList.forEach(() => {
         // Initialize todo list
         const list = [];
+        // Get todo list element
         const getList = document.querySelector('[data-list="todo-list"]');
+        // get add button
         const addButton = document.querySelector('[data-button="add-item"]');
 
         // Function to add new item to list
@@ -33,8 +35,6 @@ const todoList = () => {
 
         // Function to render updated list
         const renderList = () => {
-            // Get todo list element
-            let todoList = document.getElementById('todoList');
             // Clear current list
             getList.innerHTML = '';
             // Loop through list items and create new list elements
