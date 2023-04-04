@@ -1,22 +1,22 @@
 const getMakeList = document.querySelectorAll('[data-list="make-list"]');
 
 const todoList = () => {
-    getMakeList.forEach(() => {
+    getMakeList.forEach((item) => {
         // Initialize todo list
         const list = [];
         // Get todo list element
-        const getList = document.querySelector('[data-list="todo-list"]');
+        const getList = item.querySelector('[data-list="todo-list"]');
         // get add button
-        const addButton = document.querySelector('[data-button="add-item"]');
+        const addButton = item.querySelector('[data-button="add-item"]');
+        // Get input value
+        const getInput = item.querySelector('input');
 
         // Function to add new item to list
         const addItem = () => {
-            // Get input value
-            let item = document.getElementById('newItem').value;
             // Add item to list
-            list.push(item);
+            list.push(getInput.value);
             // Clear input field
-            document.getElementById('newItem').value = '';
+            getInput.value = '';
             // Render updated list
             renderList();
         };
@@ -40,9 +40,9 @@ const todoList = () => {
             // Loop through list items and create new list elements
             for (let i = 0; i < list.length; i++) {
                 // Create new list element
-                let item = document.createElement('li');
+                let newItem = document.createElement('li');
                 // Add text content to new element
-                item.appendChild(document.createTextNode(list[i]));
+                newItem.appendChild(document.createTextNode(list[i]));
                 // Create delete button for item
                 let deleteButton = document.createElement('button');
                 deleteButton.innerHTML = 'Delete';
@@ -51,9 +51,9 @@ const todoList = () => {
                     deleteItem(i);
                 };
                 // Add delete button to item
-                item.appendChild(deleteButton);
+                newItem.appendChild(deleteButton);
                 // Add new item to list
-                getList.appendChild(item);
+                getList.appendChild(newItem);
             }
         };
     });
