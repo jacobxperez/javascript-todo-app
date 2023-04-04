@@ -10,6 +10,8 @@ const todoList = () => {
         const addButton = item.querySelector('[data-button="add-item"]');
         // Get input value
         const getInput = item.querySelector('input');
+        // Create button
+        const button = document.createElement('button');
 
         // Function to add new item to list
         const addItem = () => {
@@ -40,16 +42,17 @@ const todoList = () => {
             // Loop through list items and create new list elements
             for (let i = 0; i < list.length; i++) {
                 // Create new list element
-                let newItem = document.createElement('li');
+                const newItem = document.createElement('li');
                 // Add text content to new element
                 newItem.appendChild(document.createTextNode(list[i]));
                 // Create delete button for item
-                let deleteButton = document.createElement('button');
-                deleteButton.innerHTML = 'Delete';
+                const deleteButton = button.cloneNode();
+                deleteButton.setAttribute('data-button', 'default');
+                deleteButton.insertAdjacentHTML('beforeend', 'Delete');
                 // Add delete function to button
-                deleteButton.onclick = function () {
+                deleteButton.addEventListener('click', () => {
                     deleteItem(i);
-                };
+                });
                 // Add delete button to item
                 newItem.appendChild(deleteButton);
                 // Add new item to list
