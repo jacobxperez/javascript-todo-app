@@ -1,10 +1,8 @@
 # JavaScript Todo List
 
----
-
-## About
-
 A Simple Vanilla Javascript Todo List
+
+---
 
 ## Getting Started
 
