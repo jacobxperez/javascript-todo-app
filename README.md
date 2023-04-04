@@ -1,6 +1,6 @@
 # JavaScript Todo List
 
-A Simple Vanilla Javascript Todo List
+[A Simple Vanilla Javascript Todo List](https://jacobxperez.github.io/javascript-todo-list/)
 
 ---
 
