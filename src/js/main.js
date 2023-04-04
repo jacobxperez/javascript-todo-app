@@ -5,5 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 import {toggle} from './modules/toggle';
+import {todoList} from './modules/todo';
 
 toggle();
+todoList();
