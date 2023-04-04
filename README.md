@@ -1,17 +1,17 @@
-# JavaScript Todo App
+# JavaScript Todo List
 
 ---
 
 ## About
 
-A Simple Vanilla Javascript Todo App
+A Simple Vanilla Javascript Todo List
 
 ## Getting Started
 
-Start by **[downloading](https://github.com/jacobxperez/javascript-todo-app/archive/master.zip)** the
-[repository](https://github.com/jacobxperez/javascript-todo-app) or by cloning Rams
+Start by **[downloading](https://github.com/jacobxperez/javascript-todo-list/archive/master.zip)** the
+[repository](https://github.com/jacobxperez/javascript-todo-list) or by cloning Rams
 
-    git clone https://github.com/jacobxperez/javascript-todo-app.git
+    git clone https://github.com/jacobxperez/javascript-todo-list.git
 
 Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
