@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    vertical-align: baseline;
+    outline: 0;
+}
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--lists
+    [data-list~="ol"],
+    [data-list~="ul"],
+    [data-list~="dl"];
+
+html {
+    @if $background-gradient == false {
+        background: $background;
+    } @else {
+        background: $background-gradient;
+    }
+    color: $font-color;
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    text-align: left;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+}
+
+img,
+svg,
+picture,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+pre,
+table,
+blockquote,
+:--headings,
+:--lists {
+    margin: calc($leading / 2) 0;
+}
