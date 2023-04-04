@@ -1,4 +1,4 @@
-# JavaScript Todo app
+# JavaScript Todo App
 
 ---
 
